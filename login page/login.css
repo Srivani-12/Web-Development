@@ -1,0 +1,125 @@
+body {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    font-family: Arial,sans-serif;
+  }
+
+  .left, .right {
+    flex: 1; /* Each takes half the width */
+  }
+  .right{
+    margin: 10px;
+    background-color: rgb(209, 252, 237);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+
+ 
+
+.header{
+    padding: 0;
+    margin: 0;
+    font-size: 38px;
+    margin-top: 10%;
+    margin-bottom: 20px;
+    text-align: center;
+   
+    
+    
+}
+.paragraph{
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+.username,
+.password
+{
+    width: 65%;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+   
+    margin-left: 15%;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    text-align:left;
+    border-color:1px solid gray;
+    padding-left: 10px;
+
+}
+
+
+.forgot-password{
+    
+    padding-left: 60%;
+    padding-right: 0%;
+    margin: 0;
+    
+}
+.forgot-password-link{
+    text-decoration: none;
+    color: black;
+}
+.login{
+    margin-top: 40px;
+    margin-left: 15%;
+    width: 65%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+.login:hover{
+    background-color: rgb(209, 252, 237);
+    border: none;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0px 8px 15px rgb(0,0,0,0.3);
+}
+
+.end-line{
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login-icons{
+    margin-top: 40px;
+    margin-left: 30%;
+}
+.svg{
+    width:60px
+}
+.image-side{
+    float: left;
+    
+    
+    width: 70%;
+    mix-blend-mode: multiply; 
+}
+.bottom-text{
+    font-size: 120%;
+    position: absolute;
+    margin-left: 10%;
+    bottom:60px;
+    left:50%;
+    transform: translateX(-5px);
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
