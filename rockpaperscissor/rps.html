@@ -6,56 +6,114 @@
     <title>Rock Paper Scissors</title>
     
     <style>
-            body{
-                background-color: black;
-                color: white;
-                font-family: Arial;
+            body {
+    background-color: #ffffff;
+    color: #d91d26;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    padding: 20px;
 }
-       
-.title{
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d91d1d;
+}
+
+.title {
     font-size: 30px;
     font-weight: bold;
-}
-.move-icon{
-    height: 50px;
+    margin-top: 20px;
 }
 
-
-.move-button
-{
+.move-button {
     width: 120px;
     height: 120px;
     border-radius: 60px;
-    border: 3px solid white;
+    border: 3px solid #d91d1d;
     background-color: transparent;
-    margin-right: 10px;
+    margin: 20px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
-.result{
+
+.move-button:hover {
+    transform: scale(1.1); 
+}
+
+.move-icon {
+    height: 50px;
+}
+
+.result {
     font-size: 25px;
     font-weight: bold;
-    margin-top: 50px;
+    margin-top: 30px;
+    color: #d91d1d;
 }
-.score{
-    margin-top: 60px;
+
+.score {
+    margin-top: 40px;
+    font-size: 20px;
 }
+
 .reset-score-button,
-.auto-play-button{
-    background-color: white;
+.auto-play-button {
+    background-color: #d91d1d;
+    color: white;
     border: none;
     font-size: 15px;
-    padding: 8px 15px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+    transition: background-color 0.3s ease;
 }
+
+.reset-score-button:hover,
+.auto-play-button:hover {
+    background-color: #c4191961;
+    
+}
+.reset-score-button:active,
+.auto-play-button:active{
+    transform: scale(1.05); 
+}
+
+button:focus {
+    outline: none; 
+}
+
+
+@media (max-width: 600px) {
+    .move-button {
+        width: 100px;
+        height: 100px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
+    
+    .result {
+        font-size: 20px;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+}
+
     </style>
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
     
     <!-- Buttons with images for moves -->
-    <button onclick="playGame('rock');" class="move-button js-rock-button"><img class="move-icon" src="../rockpaperscissor/rock-emoji.png" alt="Rock"></button>
-    <button onclick="playGame('paper');" class="move-button js-paper-button"><img class="move-icon"  src="../rockpaperscissor/paper-emoji.png" alt="Paper"</button>
-    <button onclick="playGame('scissors');" class="move-button js-scissors-button"><img class="move-icon" src="../rockpaperscissor/scissors-emoji.png" alt="Scissors"></button>
+    <button onclick="playGame('rock');" class="move-button js-rock-button"><img class="move-icon" src="rock-emoji.png" alt="Rock"></button>
+    <button onclick="playGame('paper');" class="move-button js-paper-button"><img class="move-icon"  src="paper-emoji.png" alt="Paper"</button>
+    <button onclick="playGame('scissors');" class="move-button js-scissors-button"><img class="move-icon" src="scissors-emoji.png" alt="Scissors"></button>
 
     <!-- Dynamic display for moves -->
     <p id="js-moves"></p>
@@ -162,7 +220,7 @@
             }
 
             // Update DOM elements
-            document.getElementById('js-moves').innerHTML = `You <img src="../rockpaperscissor/${playerMove}-emoji.png" class="move-icon"> vs <img src="../rockpaperscissor/${computerMove}-emoji.png" class="move-icon"> Computer`;
+            document.getElementById('js-moves').innerHTML = `You <img src="${playerMove}-emoji.png" class="move-icon"> vs <img src="${computerMove}-emoji.png" class="move-icon"> Computer`;
             document.getElementById('js-result').textContent = `Result: ${result}`;
             document.getElementById('js-score').textContent = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
         }
