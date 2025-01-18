@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .main{
+            text-align: center;
+            width: 50%;
+        }
+        .heading {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            margin-top: 60px;
+        }
+
+        #btn {
+            padding: 10px 20px;
+            background-color: #c7654d;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: all 0.3s ease-in-out;
+        }
+
+        #btn:hover {
+           
+            transform: translateY(-3px);
+        }
+
+        #btn:active {
+            transform: scale(0.95); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="main">
+    <h1 class="heading">Background Color:</h1>
+    <button id="btn">click me</button>
+    </div>
+    </div>
+    <script>
+        const colors = ["green", "blue", "red", "yellow", "purple", "pink","orange", "maroon"];
+
+        function generate() {
+            
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            return randomColor;
+        }
+
+        
+        document.getElementById('btn').addEventListener("click", function() {
+            const randomColor = generate();  
+            document.getElementsByClassName('heading')[0].textContent = "Background Color :" + randomColor;
+            document.body.style.backgroundColor = randomColor;  
+        });
+    </script>
+        
+</body>
+</html>
