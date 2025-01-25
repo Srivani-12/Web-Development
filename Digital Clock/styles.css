@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:linear-gradient(135deg, #4facfe, #00f2fe); 
+    
+    display: flex;
+    justify-content: center;
+    
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+#dayIntro{
+    text-align: center;
+    margin-bottom: 60px;
+}
+#dayName{
+    padding-top: 40px;
+    font-size: 30px;
+}
+#datIntro p{
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    padding-top: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.container {
+    background: #a186db50;
+    padding: 20px 40px;
+    border-radius: 12px;
+   
+    text-align: center;
+}
+.dispClock {
+    margin-top: 10px;
+}
+#time {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #6dd5ed, #38ef7d);
+
+    -webkit-background-clip: text; /* Makes the background clip to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text itself transparent */
+    background-clip: text; /* For other browsers */
+    text-fill-color: transparent; /* For other browsers */
+    letter-spacing: 2px;
+   
+}
+#time {
+    animation: fadeIn 1s ease-in-out;
+}
